@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>771288701144-c18gs6sa5fr01qa4kbggea773o146qha.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.771288701144-c18gs6sa5fr01qa4kbggea773o146qha</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBmJBsVO-S01Udf4dEMJ50HsP8Rj5zUxic</string>
+	<key>GCM_SENDER_ID</key>
+	<string>771288701144</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.ginopreti.MFT</string>
+	<key>PROJECT_ID</key>
+	<string>myfishtank-9d755</string>
+	<key>STORAGE_BUCKET</key>
+	<string>myfishtank-9d755.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:771288701144:ios:4655a741367bb878795fad</string>
+	<key>DATABASE_URL</key>
+	<string>https://myfishtank-9d755.firebaseio.com</string>
+</dict>
+</plist>
