@@ -15,7 +15,7 @@ struct SideMenuFooter: View
         {
             VStack
             {
-                Text("Ver. \(UIApplication.appVersion!) (\(UIApplication.appBuild!))")
+                Text("Ver. \(UIApplication.appVersion!) (\(LocalizationManager.internal_build_number.localizedText))")
                     .font(.custom("BrandonText-Regular", size: 12))
                     .foregroundColor(Color("title_brown"))
                 
