@@ -40,16 +40,12 @@ struct QuestionAnswerView: View
             {
                 if _questionViewModel.completed()
                 {
-                    QuestionCompletedSummaryView(correctAnswerCount: _questionViewModel.correctAnswerCount,
+                    QuestionCompletedSummaryView(set: self.$set,
+                                                 roundViewModel: self.roundViewModel,
+                                                 correctAnswerCount: _questionViewModel.correctAnswerCount,
                                                  wrongAnswerCount: _questionViewModel.wrongAnswerCount,
                                                  scoreMultiplier: self.roundViewModel.getScoreMultiplierForRound(withName: set),
-                                                 previousScore: self.roundViewModel.getPreviousScore(withName: set),
-                                                 onGoHome: {
-
-                                                    self.roundViewModel.updateRound(withName: set, correctAnswer: _questionViewModel.correctAnswerCount, wrongAnswer: _questionViewModel.wrongAnswerCount)
-                                                    self.roundViewModel.unlockNextRound(afterRound: set)
-                                                    presentationMode.wrappedValue.dismiss()
-                                                 })
+                                                 previousScore: self.roundViewModel.getPreviousScore(withName: set))
                 }
                 else
                 {

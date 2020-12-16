@@ -9,14 +9,17 @@ import SwiftUI
 
 struct QuestionCompletedSummaryView: View
 {
-    var qcsvm = QuestionCompletedSummaryViewModel()
+    @Binding var set: String
+    @ObservedObject var roundViewModel: RoundViewModel
+    
+    @ObservedObject var qcsvm = QuestionCompletedSummaryViewModel()
     
     var correctAnswerCount: Int
     var wrongAnswerCount: Int
     var scoreMultiplier: Int
     var previousScore: Int
-        
-    var onGoHome: () -> (Void) = {}
+
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View
     {
@@ -53,9 +56,10 @@ struct QuestionCompletedSummaryView: View
             
             Button(action: {
                 
-                qcsvm.sendScore(correctAnswer: correctAnswerCount, wrongAnswer: wrongAnswerCount)
-                onGoHome()
-                
+                qcsvm.sendScore(rvm: self.roundViewModel,
+                                correctAnswer: correctAnswerCount,
+                                wrongAnswer: wrongAnswerCount,
+                                set: self.set) { presentationMode.wrappedValue.dismiss() }
             }, label: {
                 
                 Text(LocalizationManager.btn_goHome_title.localizedText)
@@ -76,7 +80,12 @@ struct QuestionCompletedSummaryView: View
 
 struct QuestionCompletedSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionCompletedSummaryView(correctAnswerCount: 6, wrongAnswerCount: 6, scoreMultiplier: 1, previousScore: 100)
+        QuestionCompletedSummaryView(set: .constant(""),
+                                     roundViewModel: RoundViewModel(),
+                                     correctAnswerCount: 6,
+                                     wrongAnswerCount: 6,
+                                     scoreMultiplier: 1,
+                                     previousScore: 100)
     }
 }
 
