@@ -5,3 +5,101 @@
   Created by Gino Preti on 04/12/20.
   
 */
+
+// General
+"app_title" = "Train my brain";
+"level_selection_sub_text" = "Select a level to play !!!";
+
+// Summary
+"summary_message_well_done" = "Well done !!!";
+"summary_message_great_job" = "Great Job !!!";
+"summary_message_bad_result" = "Not so bad !!!";
+"summary_message_do_better" = "Can do better !!!";
+"summary_message_sleep" = "Are you sleeping ?";
+
+// Nuttons
+"btn_signin_title" = "Sign In";
+"btn_signup_title" = "Sign Up";
+"btn_ok_title" = "OK";
+"btn_close_title" = "Close";
+"btn_submit_title" = "Submit";
+"btn_next_title" = "Next";
+"btn_goHome_title" = "Go to home";
+"btn_discard_title" = "Discard";
+"btn_continue_title" = "Continue";
+"btn_try_again_title" = "Try again";
+"btn_update_level" = "Update";
+"btn_confirm_title" = "Confirm";
+"btn_send_title" = "Send";
+
+// Alert
+"alert_title" = "Train my Brain info";
+"alert_signIn_success" = "The account was successfully created.\nHave fun with Train my Brain.";
+"alert_sigIn_failed" = "Something went wrong.\nThe account cannot be created.\nPlease try again.";
+"alert_new_level" = "New levels added.\nHave fun !!!";
+"alert_new_level_added" = "New levels added.";
+"alert_level_uptodate" = "All levels are up to date.";
+"alert_first_launch_disclaimer" = "An account must be created in order to play the game on multiple devices. Tap the settings icon in the top right corner to sign up.\n\nCreating an account also allows you to share your score and view the leaderboard.\n\nAccount creation is not mandatory and if you think you don't need it you can continue playing without further restrictions.";
+"alert_question_download_error" = "An error has occurred. Questions download failed.";
+"alert_update_user_name_confirmation" = "Do you want to confirm the new name?";
+"alert_update_user_name_success" = "Name successfully updated.";
+"alert_update_user_name_failed" = "An error has occurred.\nUnable to update the name.";
+"alert_reset_score" = "Do you really want to reset your score? Clearing the score also clears all progress made in each level.\n\nThis operation cannot be undone.";
+"alert_delete_account" = "Are you sure you want to delete the account? All data will be deleted. This operation cannot be undone.";
+"alert_signout" = "Do you really want to disconnect?";
+
+// SignUp
+"sign_up_page_disclaimer" = "Creating an account allows you to play the game on multiple devices as well as share your score and view the leaderboard. \n\nAccount creation is not mandatory and if you think you don't need it you can continue playing without further restrictions.";
+"sign_up_page_title" = "SIGN UP";
+"sing_up_email_title" = "Email";
+"sign_up_email_hint" = "enter a valid email";
+"sign_up_password_title" = "Password";
+"sign_up_password_hint" = "enter a password";
+"sign_up_terms_and_conditions_label_title" = "Terms and conditions";
+"sign_up_privacy_policy_label_title" = "Privacy policy";
+"sign_up_terms_and_conditions_accept_label_title" = "I have read and accept the terms and conditions.";
+"sign_up_privacy_policy_accept_label_title" = "I have read and accept the privacy policy.";
+
+// SignIn
+"sign_in_page_title" = "SIGN IN";
+"sing_in_email_title" = "Email";
+"sign_in_email_hint" = "enter a valid email";
+"sign_in_password_title" = "Password";
+"sign_in_password_hint" = "enter a password";
+"sign_in_forgot_password_label_title" = "Forgot password? Click here.";
+"sign_in_forgot_password_alert_message" = "Enter an email where to send the instructions for resetting your password.";
+"sign_in_forgot_password_alert_title" = "Reset password";
+
+// Slide Menu
+"slide_menu_footer_title" = "© Gino Preti - All rights reserved";
+"slide_menu_title" = "MENU";
+"slide_menu_settings_title" = "User settings";
+"slide_menu_chek_new_level" = "Check new level";
+"slide_menu_leaderboard_title" = "Leaderboard";
+"slide_menu_signout_title" = "SignOut";
+
+// Settings view
+"settings_view_title" = "SETTINGS";
+"settings_name_label_title" = "Name: ";
+"settings_email_label_title" = "Email: ";
+"settings_uid_label_title" = "UID: ";
+"settings_name_edit_placeholder" = "Enter new name";
+"settings_notification_toggle_title" = "Notification on/off";
+"settings_notification_sound_title" = "Notification sound";
+"settings_reset_score_label_title" = "Reset score";
+"settings_reset_score_button_title" = "Reset";
+"settings_anonymous_username_title" = "Anonymous";
+"settings_delete_account_label_title" = "Delete account";
+"settings_delete_account_button_title" = "Delete";
+"settings_change_password_label_title" = "Change password";
+"settings_change_password_button_title" = "Change";
+"settings_change_password_alert_disclaimer" = "The password must be at least 8 characters, contain at least one number, one letter and one symbol.";
+"settings_change_password_alert_title" = "Change password";
+"settings_change_password_current_password_hint" = "Enter current password";
+"settings_change_password_new_password_hint" = "Enter new  password";
+"settings_change_password_confirm_password_hint" = "Enter new password again";
+
+// Leaderboard view
+"leaderboard_view_title" = "LEADERBOARD";
+"leaderboard_view_you_score_label" = "Your score: ";
+"leaderboard_view_you_rank_label" = "Your rank: ";

@@ -1,7 +1,106 @@
-/* 
+/*
   Localizable.strings
   My Fish Tank
 
   Created by Gino Preti on 04/12/20.
   
 */
+
+// General
+"app_title" = "Train my brain";
+"level_selection_sub_text" = "Segli il livello da giocare !!!";
+
+// Summary
+"summary_message_well_done" = "Ben fatto !!!";
+"summary_message_great_job" = "Fantastico !!!";
+"summary_message_bad_result" = "Non male !!!";
+"summary_message_do_better" = "Puoi fare meglio !!!";
+"summary_message_sleep" = "Stai dormendo ?";
+
+// Nuttons
+"btn_signin_title" = "Accedi";
+"btn_signup_title" = "Registrati";
+"btn_ok_title" = "OK";
+"btn_close_title" = "Chiudi";
+"btn_submit_title" = "Invia";
+"btn_next_title" = "Successivo";
+"btn_goHome_title" = "Continua";
+"btn_discard_title" = "Annulla";
+"btn_continue_title" = "Continua";
+"btn_try_again_title" = "Riprova";
+"btn_update_level" = "Aggiorna";
+"btn_confirm_title" = "Conferma";
+"btn_send_title" = "Invia";
+
+// Alert
+"alert_title" = "Train my Brain info";
+"alert_signIn_success" = "Account creato con successo.\nDivertiti con Train my Brain.";
+"alert_sigIn_failed" = "Si è verificato un errore.\nL'account non è stato creato.\nRiprova.";
+"alert_new_level" = "Nuovi livelli aggiunti.\nBuon divertimento !!!";
+"alert_new_level_added" = "Nuovi livelli aggiunti.";
+"alert_level_uptodate" = "Tutti i livelli sono aggiornati.";
+"alert_first_launch_disclaimer" = "Un account deve essere creato per giocare su più dispositivi. Fai clicca sull'icona delle impostazioni per creare un account.\n\nLa creazione di un account permette inoltre di condividere il tuo punteggio, vedere la classifica e ricevere notifiche quando vengono aggiunti nuovi livelli.\n\nLa creazione di un account non è obbligatoria. Se pensi di non averne bisogno, puoi continuare a giocare senza ulteriori restrizioni.";
+"alert_question_download_error" = "Si è verificato un errore. Download delle domande fallito.";
+"alert_update_user_name_confirmation" = "Vuoi confermare il nuovo nome?";
+"alert_update_user_name_success" = "Nome aggiornato con successo.";
+"alert_update_user_name_failed" = "Si è verificato un errore.\nUImpossibile aggiornare il nome.";
+"alert_reset_score" = "Vuoi davvero azzerare il tuo punteggio? L'azzeramento del punteggio azzererà anche i progressi di tutti i livelli.\n\nQuesta operazione non può essere annullata.";
+"alert_delete_account" = "Vuoi davvero cancellare l'account? Tutti i dati saranno cancellati. Questa operazione non può essere annullata.";
+"alert_signout" = "Vuoi davvero uscire?";
+
+// SignUp
+"sign_up_page_disclaimer" = "La creazione di un account ti permette di condividere il tuo punteggio, vedere la classifica e ricevere notifiche quando vengono aggiunti nuovi livelli.\n\nLa creazione di un account non è obbligatoria. Se pensi di non averne bisogno, puoi continuare a giocare senza ulteriori restrizioni.";
+"sign_up_page_title" = "SIGN UP";
+"sing_up_email_title" = "Email";
+"sign_up_email_hint" = "inserisci una email valida";
+"sign_up_password_title" = "Password";
+"sign_up_password_hint" = "inserisci la password";
+"sign_up_terms_and_conditions_label_title" = "Termini e condizioni";
+"sign_up_privacy_policy_label_title" = "Informativa pricacy";
+"sign_up_terms_and_conditions_accept_label_title" = "Ho letto ed accettato i termini e le condizioni.";
+"sign_up_privacy_policy_accept_label_title" = "Ho letto ed accettato l'informativa sulla privacy.";
+
+// SignIn
+"sign_in_page_title" = "ACCEDI";
+"sing_in_email_title" = "Email";
+"sign_in_email_hint" = "inserisci una email valida";
+"sign_in_password_title" = "Password";
+"sign_in_password_hint" = "inserisci la password";
+"sign_in_forgot_password_label_title" = "Passowrd dimenticata? Clicca qui.";
+"sign_in_forgot_password_alert_message" = "Inserisci l'email usata per la crezione dell'account dove verranno inviate le istruzioni per recuperare la password.";
+"sign_in_forgot_password_alert_title" = "Reset password";
+
+// Slide Menu
+"slide_menu_footer_title" = "© Gino Preti - Tutti i diritti riservati";
+"slide_menu_title" = "MENU";
+"slide_menu_settings_title" = "Preferenze";
+"slide_menu_chek_new_level" = "Aggiorna livelli";
+"slide_menu_leaderboard_title" = "Classifica";
+"slide_menu_signout_title" = "Esci";
+
+// Settings view
+"settings_view_title" = "PREFERENZE";
+"settings_name_label_title" = "Nome: ";
+"settings_email_label_title" = "Email: ";
+"settings_uid_label_title" = "UID: ";
+"settings_name_edit_placeholder" = "Inserisci il nuovo nome";
+"settings_notification_toggle_title" = "Notifiche on/off";
+"settings_notification_sound_title" = "Suono notifiche";
+"settings_reset_score_label_title" = "Azzera punteggio";
+"settings_reset_score_button_title" = "Azzera";
+"settings_anonymous_username_title" = "Anonimo";
+"settings_delete_account_label_title" = "Cancella account";
+"settings_delete_account_button_title" = "Cancella";
+"settings_change_password_label_title" = "Modifica password";
+"settings_change_password_button_title" = "Modifica";
+"settings_change_password_alert_disclaimer" = "La password deve avere almeno 8 caratteri, contenere almeno un numero, una lettera ed un carattere speciale.";
+"settings_change_password_alert_title" = "Cambia password";
+"settings_change_password_current_password_hint" = "Inserisci password attuale";
+"settings_change_password_new_password_hint" = "Inserisci nuova password";
+"settings_change_password_confirm_password_hint" = "Conferma nuova password";
+
+// Leaderboard view
+"leaderboard_view_title" = "CLASSIFICA";
+"leaderboard_view_you_score_label" = "Tuo punteggio: ";
+"leaderboard_view_you_rank_label" = "Tua posizione: ";
+
