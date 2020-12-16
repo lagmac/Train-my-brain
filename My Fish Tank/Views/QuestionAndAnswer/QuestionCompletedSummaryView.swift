@@ -12,7 +12,7 @@ struct QuestionCompletedSummaryView: View
     @Binding var set: String
     @ObservedObject var roundViewModel: RoundViewModel
     
-    var qcsvm = QuestionCompletedSummaryViewModel()
+    @ObservedObject var qcsvm = QuestionCompletedSummaryViewModel()
     
     var correctAnswerCount: Int
     var wrongAnswerCount: Int
@@ -56,19 +56,10 @@ struct QuestionCompletedSummaryView: View
             
             Button(action: {
                 
-                qcsvm.sendScore(correctAnswer: correctAnswerCount, wrongAnswer: wrongAnswerCount) { response in
-                    
-                    if response
-                    {
-                        self.roundViewModel.updateRound(withName: set, correctAnswer: correctAnswerCount, wrongAnswer: wrongAnswerCount)
-                        self.roundViewModel.unlockNextRound(afterRound: set)
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                    else
-                    {
-                        presentationMode.wrappedValue.dismiss()
-                    }
-                }
+                qcsvm.sendScore(rvm: self.roundViewModel,
+                                correctAnswer: correctAnswerCount,
+                                wrongAnswer: wrongAnswerCount,
+                                set: self.set) { presentationMode.wrappedValue.dismiss() }
             }, label: {
                 
                 Text(LocalizationManager.btn_goHome_title.localizedText)

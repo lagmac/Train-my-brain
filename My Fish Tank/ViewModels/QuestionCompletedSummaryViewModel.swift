@@ -8,14 +8,14 @@
 import Foundation
 import SwiftUI
 
-class QuestionCompletedSummaryViewModel
+class QuestionCompletedSummaryViewModel: ObservableObject
 {
     @AppStorage(AppStorageKeys.lastScore.rawValue) var lastScore: Int = 0
-    
+        
     var scoreMultiplier: Int = 10
     var previousScore: Int = 0
-    
-    func sendScore(correctAnswer: Int, wrongAnswer: Int, completion: @escaping ((Bool)->Void))
+        
+    func sendScore(rvm: RoundViewModel, correctAnswer: Int, wrongAnswer: Int, set: String, completion: @escaping (()->Void))
     {
         let score = calculateScore(correctAnswer: correctAnswer, wrongAnswer: wrongAnswer)
         
@@ -30,19 +30,14 @@ class QuestionCompletedSummaryViewModel
                 
                 FireBaseHelper.sendScore(value: scoreModel)
                 
-                completion(true)
-            }
-            else
-            {
-                completion(false)
+                rvm.updateRound(withName: set, correctAnswer: correctAnswer, wrongAnswer: wrongAnswer)
+                rvm.unlockNextRound(afterRound: set)
             }
         }
-        else
-        {
-            completion(false)
-        }
+        
+        completion()
     }
-    
+
     func summaryMessage(correctAnswer: Int, wrongAnswer: Int) -> String
     {
         if wrongAnswer == 0
