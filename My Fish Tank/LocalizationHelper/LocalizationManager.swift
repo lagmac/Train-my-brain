@@ -13,6 +13,7 @@ enum LocalizationManager: String
     // General
     case app_title
     case level_selection_sub_text
+    case internal_build_number
     
     // Summary
     case summary_message_well_done
@@ -116,6 +117,8 @@ enum LocalizationManager: String
             return NSLocalizedString(LocalizationManager.level_selection_sub_text.rawValue, comment: "")
         case .app_title:
             return NSLocalizedString(LocalizationManager.app_title.rawValue, comment: "")
+        case .internal_build_number:
+            return NSLocalizedString(LocalizationManager.internal_build_number.rawValue, comment: "")
         case .summary_message_well_done:
             return NSLocalizedString(LocalizationManager.summary_message_well_done.rawValue, comment: "")
         case .summary_message_great_job:
