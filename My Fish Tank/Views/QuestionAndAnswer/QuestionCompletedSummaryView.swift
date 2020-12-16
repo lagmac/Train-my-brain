@@ -9,15 +9,17 @@ import SwiftUI
 
 struct QuestionCompletedSummaryView: View
 {
+    @Binding var set: String
+    @ObservedObject var roundViewModel: RoundViewModel
+    
     var qcsvm = QuestionCompletedSummaryViewModel()
     
     var correctAnswerCount: Int
     var wrongAnswerCount: Int
     var scoreMultiplier: Int
     var previousScore: Int
-        
-    var onSendScoreSuccess: () -> (Void) = {}
-    var onSendScoreFailed: () -> (Void) = {}
+
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View
     {
@@ -58,11 +60,13 @@ struct QuestionCompletedSummaryView: View
                     
                     if response
                     {
-                        onSendScoreSuccess()
+                        self.roundViewModel.updateRound(withName: set, correctAnswer: correctAnswerCount, wrongAnswer: wrongAnswerCount)
+                        self.roundViewModel.unlockNextRound(afterRound: set)
+                        presentationMode.wrappedValue.dismiss()
                     }
                     else
                     {
-                        onSendScoreFailed()
+                        presentationMode.wrappedValue.dismiss()
                     }
                 }
             }, label: {
@@ -85,7 +89,12 @@ struct QuestionCompletedSummaryView: View
 
 struct QuestionCompletedSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionCompletedSummaryView(correctAnswerCount: 6, wrongAnswerCount: 6, scoreMultiplier: 1, previousScore: 100)
+        QuestionCompletedSummaryView(set: .constant(""),
+                                     roundViewModel: RoundViewModel(),
+                                     correctAnswerCount: 6,
+                                     wrongAnswerCount: 6,
+                                     scoreMultiplier: 1,
+                                     previousScore: 100)
     }
 }
 
