@@ -44,10 +44,13 @@ struct QuestionAnswerView: View
                                                  wrongAnswerCount: _questionViewModel.wrongAnswerCount,
                                                  scoreMultiplier: self.roundViewModel.getScoreMultiplierForRound(withName: set),
                                                  previousScore: self.roundViewModel.getPreviousScore(withName: set),
-                                                 onGoHome: {
+                                                 onSendScoreSuccess: {
 
                                                     self.roundViewModel.updateRound(withName: set, correctAnswer: _questionViewModel.correctAnswerCount, wrongAnswer: _questionViewModel.wrongAnswerCount)
                                                     self.roundViewModel.unlockNextRound(afterRound: set)
+                                                    presentationMode.wrappedValue.dismiss()
+                                                 },
+                                                 onSendScoreFailed: {
                                                     presentationMode.wrappedValue.dismiss()
                                                  })
                 }

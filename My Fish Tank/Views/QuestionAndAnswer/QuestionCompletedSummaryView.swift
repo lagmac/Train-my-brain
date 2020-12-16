@@ -16,7 +16,8 @@ struct QuestionCompletedSummaryView: View
     var scoreMultiplier: Int
     var previousScore: Int
         
-    var onGoHome: () -> (Void) = {}
+    var onSendScoreSuccess: () -> (Void) = {}
+    var onSendScoreFailed: () -> (Void) = {}
     
     var body: some View
     {
@@ -53,9 +54,17 @@ struct QuestionCompletedSummaryView: View
             
             Button(action: {
                 
-                qcsvm.sendScore(correctAnswer: correctAnswerCount, wrongAnswer: wrongAnswerCount)
-                onGoHome()
-                
+                qcsvm.sendScore(correctAnswer: correctAnswerCount, wrongAnswer: wrongAnswerCount) { response in
+                    
+                    if response
+                    {
+                        onSendScoreSuccess()
+                    }
+                    else
+                    {
+                        onSendScoreFailed()
+                    }
+                }
             }, label: {
                 
                 Text(LocalizationManager.btn_goHome_title.localizedText)

@@ -15,7 +15,7 @@ class QuestionCompletedSummaryViewModel
     var scoreMultiplier: Int = 10
     var previousScore: Int = 0
     
-    func sendScore(correctAnswer: Int, wrongAnswer: Int)
+    func sendScore(correctAnswer: Int, wrongAnswer: Int, completion: @escaping ((Bool)->Void))
     {
         let score = calculateScore(correctAnswer: correctAnswer, wrongAnswer: wrongAnswer)
         
@@ -29,7 +29,17 @@ class QuestionCompletedSummaryViewModel
                 let scoreModel = ScoreModel(score: lastScore, user: userInfo.uid!)
                 
                 FireBaseHelper.sendScore(value: scoreModel)
+                
+                completion(true)
             }
+            else
+            {
+                completion(false)
+            }
+        }
+        else
+        {
+            completion(false)
         }
     }
     
