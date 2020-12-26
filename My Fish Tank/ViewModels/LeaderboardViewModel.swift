@@ -11,21 +11,19 @@ import SwiftUI
 class LeaderboardViewModel: ObservableObject
 {
     @Published var scores: [LeaderboardScoreModel] = []
+    @Published var userScoreAndRank: UserScoreRankModel!
     
     @AppStorage(AppStorageKeys.lastScore.rawValue) var lastScore: Int = 0
     
-    func getScores(completion: @escaping ((Bool)->Void))
+    func getScores()
     {
         FireBaseHelper.getLeaderboardScores { result in
             
             if result.isEmpty == false
             {
-                self.scores = result
-                
-                completion(true)
+                self.scores = result;
+                self.userScoreAndRank = self.getUserScoreAndRank()
             }
-            
-            completion(false)
         }
     }
     

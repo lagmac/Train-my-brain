@@ -9,5 +9,6 @@ target 'My Fish Tank' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'FirebaseFirestoreSwift', '~> 7.0-beta'
+pod 'Firebase/Messaging'
 
 end
