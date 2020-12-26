@@ -10,9 +10,7 @@ import SwiftUI
 struct LeaderboardView: View {
     
     @ObservedObject var lbvm = LeaderboardViewModel()
-    
-    @State var userScoreAndRank: UserScoreRankModel = UserScoreRankModel(score: "0", rank: "0")
-    
+        
     var body: some View
     {
         ZStack
@@ -38,13 +36,13 @@ struct LeaderboardView: View {
                     
                     HStack {
 
-                        Text(userScoreAndRank.score!)
+                        Text(lbvm.userScoreAndRank.score!)
                             .font(.custom("BrandonText-Regular", size: 20))
                             .foregroundColor(Color("title_brown"))
                         
                         Spacer()
                         
-                        Text(userScoreAndRank.rank!)
+                        Text(lbvm.userScoreAndRank.rank!)
                             .font(.custom("BrandonText-Regular", size: 20))
                             .foregroundColor(Color("title_brown"))
                     }
@@ -64,15 +62,6 @@ struct LeaderboardView: View {
             }
         }
         .padding(.horizontal,20)
-        .onAppear(perform: {
-            
-            lbvm.getScores(completion: { result in
-                
-                if result
-                {
-                    self.userScoreAndRank = lbvm.getUserScoreAndRank()
-                }
-            })
-        })
+        .onAppear(perform: { lbvm.getScores() })
     }
 }
